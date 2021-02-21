@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;}
+
+.container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:    "h m n" }
+
+header, nav{
+    background-color: rgb(51,83,132);
+    height: 100vh;
+    grid-area: h;
+    color: white;}
+
+header > img{
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 50px;}
+
+header > h1,h2,h3{
+    font-size: 30px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 50px;}
+
+header > p,ul {
+    width: calc(100% - 10%);
+    font-size: 15px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 15px;}
+
+header p > img{
+    padding-right: 5px;}
+
+header p > a{
+    text-decoration: none;
+    color: white;}
+
+header p > a:hover{
+    transition: 0.5s ease;
+    text-shadow: 2px 2px 30px white;
+    color: rgb(0, 255, 234);}
+
+header > h2, h3{
+    margin-top: 15px;}
+
+header > div{
+    margin-left: 30px;
+    padding: 0px 5px 10px 0px;}
+
+.skill{
+    margin: 0;
+    display: inline-block;    }
+
+.skill > div{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    border-radius: 100%;
+    margin-bottom: calc(100% - 80%);
+    display: inline-block;}
+
+.skill > .html1{
+    background-color: white;}
+
+#sHTML::before{
+    content: "";
+    background-image: url(./icon/html.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;}
+
+#sCSS::before{
+    content: "";
+    background-image: url(./icon/css.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;}
+
+#sJS::before{
+    content: "";
+    background-image: url(./icon/js.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;}
+
+header ul > li{
+    margin-bottom: 15px;}
+
+main{
+    background-color: rgb(51,83,132, 0.1);
+    grid-area: m;
+    color: rgb(51,83,132);}
+
+main > h1{
+    
+    font-size: 35px;
+    text-align: center;
+    margin-top: calc(100% - 80%);}
+
+main > h1::after{
+    content: "";
+    background-color: rgb(51,83,132);
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin-top: 10px;}
+
+main > h2,h3 {
+    color: rgb(91,167,209);
+    margin-top: 15px;}
+
+main > p{
+    margin: 0px 20px 10px 30px;
+    color: black;
+    text-align: justify;}
+
+main > ul{ 
+    font-weight: 600;
+    color: black;
+    text-align: left;}
+
+main ul > p{
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 5px 0px 5px 0px;}
+
+main ul > li{
+    font-weight: 400;
+    margin: 5px 0px 0px 6%; }
+
+nav{
+    grid-area: n;}
+
+nav > h1 {
+    margin-top: calc(100% - 57%);
+    text-align: left;
+    margin-left: 20px;}
+
+nav > ol{
+    margin: 15px 0px 0px 40px;}
+
+nav ol > li{
+    margin-top: 10px;
+    padding-bottom: 10px;}
+
+nav ol li > a{
+    color: white;
+    text-decoration: none;}
+
+nav ol li > a:hover{
+    animation: ptf 0.2s forwards ease-in;}
+
+
+header p > a, nav ol li > a {
+    box-shadow: 0px 0px 5px rgba(0, 255, 234);
+    padding: 5px;
+    border-radius: 10px;}
+
+@keyframes ptf{
+
+    100%{ 
+        color: rgb(0, 255, 234);
+    } 
+}
+
+@media screen and (max-width: 800px){
+
+    header > img{
+        margin: 10px 5px 0px 5px;}
+
+    header > h1,h2,h3{
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 20px;}
+
+    header > p {
+        padding-bottom: 10px;    }
+
+    header p > a{
+        font-size: 14px;    }
+
+    header > p,ul {
+        font-size: 15px;
+        margin-left: 10px;
+        list-style: none;
+        margin-bottom: 5px;}
+
+    header, nav, main{
+        height: 100%;    }
+
+    main > p{
+        margin: 0px 20px 10px 10px;}
+
+    nav > ol{
+        margin: 15px 0px 0px 25px;}
+    
+    nav ol li > a{font-size: 15px;}
+}
+
+@media screen and (max-width: 700px){
+    header > p {
+        font-size: 13px;
+        margin-bottom: 15px;}
+    nav ol li > a{font-size: 12px;}
+}
+
+
+@media (min-width:200px) and (max-width: 600px){
+
+    .container{
+        grid-template-rows: auto auto auto;
+        grid-template-areas:    "h h h"
+                                "m m m"
+                                "n n n";}
+        
+    header > img{
+        width: 300px;
+        margin: 20px 5px 0px 40px;}
+    
+    header p >img{
+        display: initial; }
+
+    header > h1,h2,h3{
+        font-size: 35px;
+        margin-top: 20px;}
+    
+    header > p,ul {
+        font-size: 20px;
+        margin-bottom: 20px;}
+
+    main > h1{
+        font-size: 30px;
+        margin-top: 5%}
+
+    main > h1::after{
+        margin: auto;
+        width: 95%;}
+
+    main > p {
+        font-size: 19px;}
+
+    main > ul {
+        font-size: 20px;}
+
+    nav > h1{
+        margin-top: 10px;
+        font-size: 35px;    }
+
+    nav > ol{
+        font-size: 25px;
+        margin: 0px 0px 10px 35px;}    
+    
+    header p > a, nav ol li > a {
+        box-shadow: 0px 0px 5px rgba(0, 255, 234);
+        padding: 5px;
+        border-radius: 10px;}
+
+}
